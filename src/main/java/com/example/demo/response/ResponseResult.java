@@ -37,10 +37,15 @@ public class ResponseResult<T> implements ResponseBodyAdvice<Object> {
                 logger.error("系统错误",e);
             }
         }
-//        else if(body instanceof ExceptionResponseResult) {// 判断返回值结果是否是一个异常对象类型
-//                         // 如果是异常类型，传入异常状态码（枚举类型）和异常数据。
-//                         return ResponseData.error(ResponseCode.SYSTEM_ERROR,body);
-//        }
+        //如果是ResponseData类型则不作处理
+        else if(body instanceof ResponseData) {//
+
+            return body;
+        }
+        // 如果是异常类型，传入异常状态码（枚举类型）和异常数据。
+        else {
+
+        }
         return ResponseData.success(body);
     }
 
