@@ -44,11 +44,20 @@ public class AopLog {
     }
 
     /**
+     * 切入点
+     */
+    @Pointcut("execution(public * com.example.demo.controller..*(..))")
+    public void conlog() {
+
+    }
+
+
+    /**
      * 在切点之前织入
      * @param joinPoint
      * @throws Throwable
      */
-    @Before("log()")
+    @Before("log()||conlog()")//多个切入点 切入方法
     public void doBefore(JoinPoint joinPoint) throws Throwable {
         // 开始打印请求日志
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
@@ -72,11 +81,10 @@ public class AopLog {
      * 在切点之后织入
      * @throws Throwable
      */
-    @After("log()")
+    @After("log()||conlog()")
     public void doAfter() throws Throwable {
         log.info("=========================================== End ===========================================");
         // 每个请求之间空一行
-        log.info("");
     }
 
 

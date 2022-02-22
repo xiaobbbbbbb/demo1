@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -12,6 +14,7 @@ import java.util.Date;
 
 @Controller
 public class HelloController {
+    private static final Logger logger= LoggerFactory.getLogger(HelloController.class);
 
     @RequestMapping("hello")
     @ResponseBody
@@ -22,6 +25,7 @@ public class HelloController {
     @RequestMapping("index")
     public String index(ModelMap modelMap, HttpServletRequest request){
         modelMap.addAttribute("now", DateFormat.getDateInstance().format(new Date()));
+        logger.info("我是控制器日志..");
         return "index";
     }
 }
