@@ -23,10 +23,11 @@ public class StringTest {
   }
 
   public static void method1(){
-    String s1 =new String("1");
-    s1.intern();//字符串常量池中存在“1”，调用此方法没用
-    String s2 ="1";
+    String s1 =new String("1"); //s1 返回是堆中地址的引用
+    s1.intern();//字符串常量池中存在“1”，此方法返回的是常量池地址
+    String s2 ="1";//s2 返回是常量池中的引用地址
     System.out.println(s1==s2);//false
+    System.out.println( s1.intern()==s2);//true
     String s3 =new String("1")+new String("1");
     s3.intern();//此时字符串常量池没有"11",调用此方法会重新赋值s3
     String s4 ="11";

@@ -90,7 +90,7 @@ public class MyStack<T> {
     }
 
     public static void main(String[] args) {
-        String expr="3+6*7-6";
+        String expr="3+6*7-6*15+33-2";
         MyStack<Integer> dataStack =new MyStack<>();
         MyStack<Character> optStack =new MyStack<>();
 

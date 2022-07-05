@@ -97,7 +97,7 @@ public class Josepfu {
 //        josepfu.printNode();
 //        josepfu.addNode(3);
 //        josepfu.printNode();
-        josepfu.countBoy(1,2,15);
+        josepfu.countBoy(4,6,15);
 //        Integer.parseInt()
     }
 }

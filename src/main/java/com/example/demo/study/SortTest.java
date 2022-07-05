@@ -322,14 +322,14 @@ public class SortTest {
             arr2[i] = (int)(Math.random()*1000000);
         }
         long time1 =System.currentTimeMillis();
-//        maopao(arr);
+        maopao(arr);
 //        choose(arr);
 //        insert(arr);
 //        shellSort(arr);
 //        quickSort(arr,0,arr.length-1);
-//        mergeSort(arr,0,arr.length-1);
-//        solve(arr);
-        bucketSort(arr);
+//        mergeSort(arr2,0,arr2.length-1);
+//        solve(arr2);
+//        bucketSort(arr2);
         System.out.println("排序耗时："+(System.currentTimeMillis()-time1)+"毫秒");
     }
 

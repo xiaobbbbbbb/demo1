@@ -22,7 +22,7 @@ public class GenericTest {
      order1.setOrderT("你好啊！");
 
     //通配符的问题
-    List<?> list =null;
+    List<? > list =null;
     List<String> list2 =new ArrayList<>(10);
     list2.add("AA");
     list2.add("BB");
@@ -33,6 +33,7 @@ public class GenericTest {
     list.add(null);
     //通配符可以读
     Object o = list.get(0);
+    System.out.println(o);
 
     /**
      *     有限制条件的通配符

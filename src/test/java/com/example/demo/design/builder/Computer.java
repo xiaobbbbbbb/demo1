@@ -87,14 +87,14 @@ class App{
         System.out.println("剩余空间:"+runtime.freeMemory()/(1024*1024));
         ArrayList<String > list = new ArrayList<>(100);
 
-//        runtime.freeMemory();
-//        Computer computer = new Computer.Builder("CMD","三星").setKeyboard("海盗船").setUsbCount(123).build();
-        while (true){
-            list.add(new String("xxxx"));
-
-
-//            hello();
-        }
+        runtime.freeMemory();
+        Computer computer = new Computer.Builder("CMD","三星").setKeyboard("海盗船").setUsbCount(123).build();
+//        while (true){
+//            list.add(new String("xxxx"));
+//
+//
+////            hello();
+//        }
 //        Thread.sleep(1000000);
     }
 
