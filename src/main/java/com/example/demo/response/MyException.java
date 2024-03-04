@@ -2,13 +2,13 @@ package com.example.demo.response;
 
 public class MyException extends RuntimeException {
 
-        public MyException(Integer code, String msg) {
-            super(msg);
-            this.code = code;
-        }
+    public MyException(Integer code, String msg) {
+        super(msg);
+        this.code = code;
+    }
 
-        private Integer code;
-        private String msg;
+    private Integer code;
+    private String msg;
 
     public Integer getCode() {
         return code;

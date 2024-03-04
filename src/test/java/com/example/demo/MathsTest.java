@@ -2,6 +2,11 @@ package com.example.demo;
 
 
 import java.io.IOException;
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -76,9 +81,30 @@ public class MathsTest   {
   }
 
   public static void main(String[] args) {
-    boolean b =true;
-    int i =0;
-    System.out.println();
+//    LocalDateTime dateTime1 = LocalDateTime.now();
+//    LocalDateTime dateTime2 = LocalDateTime.of(2023,6,30,0,0,0);
+//    long l = Duration.between(dateTime1, dateTime2).toDays();
+//    System.out.println(l);
+
+      Scanner scanner = new Scanner(System.in);
+      System.out.print("请输入总人数：");
+      int n = scanner.nextInt();
+      System.out.print("请输入报数的数字：");
+      int m = scanner.nextInt();
+
+      List<Integer> circle = new ArrayList<>();
+      for (int i = 1; i <= n; i++) {
+        circle.add(i);
+      }
+
+      int index = 5;
+      while (circle.size() > 1) {
+        index = (index + m - 1) % circle.size(); // 计算报数的人的索引
+        circle.remove(index); // 将报数的人从圆圈中删除
+      }
+
+      System.out.println("最后留下的人是：" + circle.get(0)); // 输出最后留下的人的编号
+
   }
 
 }

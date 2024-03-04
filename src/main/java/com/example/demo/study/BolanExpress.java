@@ -34,6 +34,7 @@ public class BolanExpress {
         map[1][3]=1;
         map[2][3]=1;
         map[3][3]=1;
+        map[3][1]=1;
 
         //输出地图
         for(int i=0;i<=7;i++){

@@ -2,6 +2,7 @@ package com.example.demo.aop;
 
 import cn.hutool.core.util.ArrayUtil;
 import cn.hutool.json.JSONUtil;
+import com.alibaba.fastjson.JSONObject;
 import com.google.common.collect.Maps;
 import eu.bitwalker.useragentutils.UserAgent;
 import lombok.AllArgsConstructor;
@@ -74,7 +75,9 @@ public class AopLog {
         // 打印请求的 IP
         log.info("IP             : {}", request.getRemoteAddr());
         // 打印请求入参
-        log.info("Request Args   : {}",JSONUtil.toJsonStr(joinPoint.getArgs()));
+        log.info("Request Args s  : {}",joinPoint.getArgs());
+
+//        log.info("Request Args   : {}", JSONObject.toJSONString(joinPoint.getArgs()));
     }
 
     /**

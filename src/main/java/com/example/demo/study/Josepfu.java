@@ -1,5 +1,10 @@
 package com.example.demo.study;
 
+import java.time.Duration;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+
 /**
  * Josepfu
  * 约瑟夫环
@@ -52,7 +57,7 @@ public class Josepfu {
     /**
      * 出圈逻辑
      * @param startNo 起始位置 从第几个人开始数数
-     * @param count 间隔人数，没隔几个人出局
+     * @param count 间隔人数，每隔几个人出局
      * @param nums 总共有多少人
      */
     public void countBoy(int startNo,int count,int nums){
@@ -98,7 +103,7 @@ public class Josepfu {
 //        josepfu.addNode(3);
 //        josepfu.printNode();
         josepfu.countBoy(4,6,15);
-//        Integer.parseInt()
+
     }
 }
 
